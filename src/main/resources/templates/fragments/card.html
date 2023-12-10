@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div class="my-nav" th:insert="fragments/addOns"></div>
+</head>
+<body>
+<div class="inventory">
+<div th:each="car : ${cars}" class="card" >
+            <img th:src="${car.imageUrl}" alt="Image" style="height: 150px">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <span th:text="${car.make.name + ' ' + car.model.name}"></span>
+                </h5>
+                <p class="card-text">
+                    <span th:text="${car.transmission}"></span>
+                    -
+                    <span th:text="${car.launchYear.launchYear}"></span>
+                    -
+                    <span th:text="${car.vin.vinNumber}"></span>
+                </p>
+                <form method="get" th:action="@{/delete-car}">
+                    <input type="hidden" name="vin" th:value="${car.vin}" />
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+</div>
+</body>
+</html>

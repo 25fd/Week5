@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div class="my-nav" th:insert="fragments/addOns"></div>
+</head>
+<body>
+<div  class="my-nav" th:insert="fragments/navbar"></div>
+
+<div class="container">
+  <h1> Inventory </h1> <hr/>
+  <p th:if="${message}" style="color: green;">  <span th:text="${message}" ></span></p>
+  <h4> Total Cars Available - <span th:text="${cars.size()}"></span> </h4>
+<div th:insert="fragments/card"></div>
+
+
+</div>
+
+</body>
+</html>

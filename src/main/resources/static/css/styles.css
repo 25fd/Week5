@@ -1,0 +1,25 @@
+.inventory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+;
+}
+.card {
+    margin: 5px;
+    border-color: #ffeac4;
+    background-color: aliceblue;
+    width: min-content;
+}
+
+.card:hover {
+    /*border-color: #fff5c4;*/
+    /*background-color: rgba(255, 228, 196, 0.29);*/
+    width: 15rem;
+    box-shadow: black 0px 0px 10px;
+}
+
+.my-nav {
+    background-color: bisque;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
